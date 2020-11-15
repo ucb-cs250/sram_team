@@ -1,0 +1,110 @@
+$date
+	Thu Oct 29 18:00:15 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module bl_mask_tb_2 $end
+$var wire 32 ! bl_mask [31:0] $end
+$var reg 2 " addr [1:0] $end
+$var reg 2 # conf [1:0] $end
+$scope module bl_mask_2 $end
+$var wire 2 $ addr [1:0] $end
+$var wire 1 % c16 $end
+$var wire 1 & c32 $end
+$var wire 1 ' c8 $end
+$var wire 2 ( conf [1:0] $end
+$var wire 1 ) q1_en $end
+$var wire 1 * q2_en $end
+$var wire 1 + q3_en $end
+$var wire 1 , q4_en $end
+$var wire 32 - bl_mask [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx -
+x,
+x+
+x*
+x)
+bx (
+x'
+x&
+x%
+bx $
+bx #
+bx "
+bx !
+$end
+#5
+1)
+1+
+1*
+b0 !
+b0 -
+1,
+1&
+0%
+0'
+b0 "
+b0 $
+b0 #
+b0 (
+#15
+0+
+b11111111111111110000000000000000 !
+b11111111111111110000000000000000 -
+0,
+0&
+1%
+b1 #
+b1 (
+#25
+0)
+0*
+1+
+b1111111111111111 !
+b1111111111111111 -
+1,
+b1 "
+b1 $
+#35
+1)
+0+
+b11111111111111111111111100000000 !
+b11111111111111111111111100000000 -
+0,
+0%
+1'
+b0 "
+b0 $
+b10 #
+b10 (
+#45
+0)
+b11111111111111110000000011111111 !
+b11111111111111110000000011111111 -
+1*
+b1 "
+b1 $
+#55
+1+
+0)
+b11111111000000001111111111111111 !
+b11111111000000001111111111111111 -
+0*
+b10 "
+b10 $
+#65
+0+
+b111111111111111111111111 !
+b111111111111111111111111 -
+1,
+b11 "
+b11 $
+#75

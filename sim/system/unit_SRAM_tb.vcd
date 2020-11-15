@@ -1,0 +1,347 @@
+$date
+	Sun Nov  1 01:02:40 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module unit_SRAM_tb $end
+$var wire 32 ! D_out [31:0] $end
+$var reg 32 " D_in [31:0] $end
+$var reg 12 # addr [11:0] $end
+$var reg 1 $ clk $end
+$var reg 2 % conf [1:0] $end
+$var reg 1 & csb $end
+$var reg 1 ' web $end
+$scope module sram $end
+$var wire 32 ( D_in [31:0] $end
+$var wire 32 ) D_out [31:0] $end
+$var wire 12 * addr [11:0] $end
+$var wire 2 + conf [1:0] $end
+$var wire 1 & csb $end
+$var wire 1 $ sram_clk $end
+$var wire 1 ' web $end
+$var wire 4 , write_mask [3:0] $end
+$var wire 1 - web_sync $end
+$var wire 1 . csb_sync $end
+$var wire 2 / conf_sync [1:0] $end
+$var wire 12 0 addr_sync [11:0] $end
+$var wire 32 1 D_out_sram [31:0] $end
+$var wire 32 2 D_in_sync [31:0] $end
+$var wire 32 3 D_in_sram [31:0] $end
+$var reg 2 4 addr_overflow_registered [1:0] $end
+$var reg 2 5 conf_registered [1:0] $end
+$scope module bl_mask_8_32 $end
+$var wire 2 6 addr [1:0] $end
+$var wire 1 7 addr0_b $end
+$var wire 1 8 addr1_b $end
+$var wire 1 9 c16_b $end
+$var wire 1 : c16_h1_en $end
+$var wire 1 ; c16_h2_en $end
+$var wire 1 < c32 $end
+$var wire 1 = c8_b $end
+$var wire 1 > c8_q1_en $end
+$var wire 1 ? c8_q2_en $end
+$var wire 1 @ c8_q3_en $end
+$var wire 1 A c8_q4_en $end
+$var wire 1 B conf0_b $end
+$var wire 1 C conf1_b $end
+$var wire 1 D h1_en $end
+$var wire 1 E h1_en_b $end
+$var wire 1 F h2_en $end
+$var wire 1 G h2_en_b $end
+$var wire 1 H q1_en_b $end
+$var wire 1 I q2_en_b $end
+$var wire 1 J q3_en_b $end
+$var wire 1 K q4_en_b $end
+$var wire 2 L conf [1:0] $end
+$var wire 4 M bl_mask [3:0] $end
+$upscope $end
+$scope module data_in_mux $end
+$var wire 1 N c16 $end
+$var wire 1 O c32 $end
+$var wire 1 P c8 $end
+$var wire 32 Q data_in [31:0] $end
+$var wire 2 R conf [1:0] $end
+$var wire 32 S D [31:0] $end
+$upscope $end
+$scope module data_out_mux $end
+$var wire 2 T addr [1:0] $end
+$var wire 1 U c16 $end
+$var wire 1 V c16_h1 $end
+$var wire 1 W c16_h2 $end
+$var wire 1 X c32 $end
+$var wire 1 Y c8 $end
+$var wire 1 Z c8_q1 $end
+$var wire 1 [ c8_q2 $end
+$var wire 1 \ c8_q3 $end
+$var wire 1 ] c8_q4 $end
+$var wire 2 ^ conf [1:0] $end
+$var wire 32 _ data_out [31:0] $end
+$var wire 32 ` D [31:0] $end
+$upscope $end
+$scope module sram $end
+$var wire 10 a addr0 [9:0] $end
+$var wire 1 $ clk0 $end
+$var wire 32 b din0 [31:0] $end
+$var wire 4 c wmask0 [3:0] $end
+$var wire 1 - web0 $end
+$var wire 1 . csb0 $end
+$var reg 10 d addr0_reg [9:0] $end
+$var reg 1 e csb0_reg $end
+$var reg 32 f din0_reg [31:0] $end
+$var reg 32 g dout0 [31:0] $end
+$var reg 1 h web0_reg $end
+$var reg 4 i wmask0_reg [3:0] $end
+$scope begin MEM_READ0 $end
+$upscope $end
+$scope begin MEM_WRITE0 $end
+$upscope $end
+$upscope $end
+$scope module sync $end
+$var wire 32 j D_in [31:0] $end
+$var wire 32 k D_in_sync [31:0] $end
+$var wire 12 l addr [11:0] $end
+$var wire 12 m addr_sync [11:0] $end
+$var wire 2 n conf [1:0] $end
+$var wire 2 o conf_sync [1:0] $end
+$var wire 1 & csb $end
+$var wire 1 . csb_sync $end
+$var wire 1 $ sram_clk $end
+$var wire 1 ' web $end
+$var wire 1 - web_sync $end
+$var reg 32 p D_in_int [31:0] $end
+$var reg 32 q D_in_reg [31:0] $end
+$var reg 12 r addr_int [11:0] $end
+$var reg 12 s addr_reg [11:0] $end
+$var reg 2 t conf_int [1:0] $end
+$var reg 2 u conf_reg [1:0] $end
+$var reg 1 v csb_int $end
+$var reg 1 w csb_reg $end
+$var reg 1 x web_int $end
+$var reg 1 y web_reg $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+xy
+xx
+xw
+xv
+bx u
+bx t
+bx s
+bx r
+bx q
+bx p
+bx o
+bx n
+bx m
+bx l
+bx k
+bx j
+bx i
+xh
+bx g
+bx f
+xe
+bx d
+bx c
+bx b
+bx a
+bx `
+bx _
+bx ^
+x]
+x\
+x[
+xZ
+xY
+xX
+xW
+xV
+xU
+bx T
+bx S
+bx R
+bx Q
+xP
+xO
+xN
+bx M
+bx L
+xK
+xJ
+xI
+xH
+xG
+xF
+xE
+xD
+xC
+xB
+xA
+x@
+x?
+x>
+x=
+x<
+x;
+x:
+x9
+x8
+x7
+bx 6
+bx 5
+bx 4
+bx 3
+bx 2
+bx 1
+bx 0
+bx /
+x.
+x-
+bx ,
+bx +
+bx *
+bx )
+bx (
+x'
+x&
+bx %
+0$
+bx #
+bx "
+bx !
+$end
+#2
+0'
+0&
+b10101010101110111100110011011101 "
+b10101010101110111100110011011101 (
+b10101010101110111100110011011101 j
+b0 #
+b0 *
+b0 l
+b0 %
+b0 +
+b0 n
+#4
+0x
+0v
+b0 t
+b0 r
+b10101010101110111100110011011101 p
+1$
+#8
+0$
+#10
+1&
+#12
+0H
+0I
+0J
+b0 ,
+b0 M
+b0 c
+0K
+1D
+1F
+0A
+0;
+0E
+0G
+17
+18
+0:
+0>
+0?
+0@
+0P
+0N
+1O
+1=
+19
+1<
+1C
+1B
+b0 a
+b0 6
+b10101010101110111100110011011101 3
+b10101010101110111100110011011101 Q
+b10101010101110111100110011011101 b
+0-
+0y
+0.
+0w
+b0 /
+b0 L
+b0 R
+b0 o
+b0 u
+b0 0
+b0 m
+b0 s
+b10101010101110111100110011011101 2
+b10101010101110111100110011011101 S
+b10101010101110111100110011011101 k
+b10101010101110111100110011011101 q
+1v
+1$
+#16
+0$
+#18
+1'
+0&
+#20
+0Z
+0\
+0V
+0W
+0[
+0]
+1X
+0U
+0Y
+1.
+1w
+1x
+0v
+b0 4
+b0 T
+b0 5
+b0 ^
+b10101010101110111100110011011101 f
+b0 d
+b0 i
+0h
+0e
+1$
+#24
+0$
+#28
+1-
+1y
+0.
+0w
+1e
+1$
+#32
+0$
+#36
+1h
+0e
+1$
+#40
+b10101010101110111100110011011101 !
+b10101010101110111100110011011101 )
+b10101010101110111100110011011101 _
+b10101010101110111100110011011101 1
+b10101010101110111100110011011101 `
+b10101010101110111100110011011101 g
+0$
+#42
