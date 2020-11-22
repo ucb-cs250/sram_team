@@ -1,0 +1,64 @@
+$date
+	Tue Nov 17 23:11:18 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module output_shifter_tb $end
+$var wire 32 ! dout [31:0] $end
+$var reg 32 " D [31:0] $end
+$var reg 5 # addr [4:0] $end
+$var reg 3 $ conf [2:0] $end
+$scope module output_shifter_dut $end
+$var wire 32 % D [31:0] $end
+$var wire 5 & addr [4:0] $end
+$var wire 3 ' conf [2:0] $end
+$var reg 32 ( dout [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx (
+bx '
+bx &
+bx %
+bx $
+bx #
+bx "
+bx !
+$end
+#5
+b11110001111100101111001111110100 !
+b11110001111100101111001111110100 (
+b0 $
+b0 '
+b111 #
+b111 &
+b11110001111100101111001111110100 "
+b11110001111100101111001111110100 %
+#15
+b11110001111100101111000111110010 !
+b11110001111100101111000111110010 (
+b1 $
+b1 '
+#25
+b11110001111100011111000111110001 !
+b11110001111100011111000111110001 (
+b10 $
+b10 '
+#35
+b11111111111111111111111111111111 !
+b11111111111111111111111111111111 (
+b11 $
+b11 '
+#45
+b100 $
+b100 '
+#55
+b101 $
+b101 '
+#65
