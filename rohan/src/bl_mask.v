@@ -23,12 +23,14 @@ module bl_mask (
       3'b001: begin
         if (!addr[0]) mask = {{16{1'b0}}, {16{1'b1}}};
         else if (addr[0]) mask = {{16{1'b1}}, {16{1'b0}}};
+        else mask = {32{1'b0}};
       end
       3'b010: begin
         if (addr[1:0] == 2'b00) mask = {{24{1'b0}}, {8{1'b1}}};
         else if (addr[1:0] == 2'b01) mask = {{16{1'b0}}, {8{1'b1}}, {8{1'b0}}};
         else if (addr[1:0] == 2'b10) mask = {{8{1'b0}}, {8{1'b1}}, {16{1'b0}}};
         else if (addr[1:0] == 2'b11) mask = {{8{1'b1}}, {24{1'b0}}};
+        else mask = {32{1'b0}};
       end
       3'b011: begin
         if (addr[2:0] == 3'b000) mask = {{28{1'b0}}, {4{1'b1}}};
@@ -39,6 +41,7 @@ module bl_mask (
         else if (addr[2:0] == 3'b101) mask = {{8{1'b0}}, {4{1'b1}}, {20{1'b0}}};
         else if (addr[2:0] == 3'b110) mask = {{4{1'b0}}, {4{1'b1}}, {24{1'b0}}};
         else if (addr[2:0] == 3'b111) mask = {{4{1'b1}}, {28{1'b0}}};
+        else mask = {32{1'b0}};
       end
       3'b100: begin
         if (addr[3:0] == 4'b000) mask = {{30{1'b0}}, {2{1'b1}}};
@@ -57,6 +60,7 @@ module bl_mask (
         else if (addr[3:0] == 4'b1101) mask = {{4{1'b0}}, {2{1'b1}}, {26{1'b0}}};
         else if (addr[3:0] == 4'b1110) mask = {{2{1'b0}}, {2{1'b1}}, {28{1'b0}}};
         else if (addr[3:0] == 4'b1111) mask = {{2{1'b1}}, {30{1'b0}}};
+        else mask = {32{1'b0}};
       end
       3'b101: begin
         if (addr[4:0] == 5'b00000) mask = {{31{1'b0}}, {1{1'b1}}};
@@ -91,6 +95,7 @@ module bl_mask (
         else if (addr[4:0] == 5'b11101) mask = {{2{1'b0}}, {1{1'b1}}, {29{1'b0}}};
         else if (addr[4:0] == 5'b11110) mask = {{1{1'b0}}, {1{1'b1}}, {30{1'b0}}};
         else if (addr[4:0] == 5'b11111) mask = {{1{1'b1}}, {31{1'b0}}};
+        else mask = {32{1'b0}};
       end
       default: mask = {32{1'b1}};
     endcase

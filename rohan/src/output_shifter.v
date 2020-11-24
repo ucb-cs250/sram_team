@@ -23,12 +23,14 @@ module output_shifter (
       3'b001: begin
         if (!addr[0]) dout = {2{D[15:0]}};         //Is dout=D more efficient?
         else if (addr[0]) dout = {2{D[31:16]}};
+        else dout = D;
       end
       3'b010: begin
         if (addr[1:0] == 2'b00) dout = {4{D[7:0]}};
         else if (addr[1:0] == 2'b01) dout = {4{D[15:8]}};
         else if (addr[1:0] == 2'b10) dout = {4{D[23:16]}};
         else if (addr[1:0] == 2'b11) dout = {4{D[31:24]}};
+        else dout = D;
       end
       3'b011: begin
         if (addr[2:0] == 3'b000) dout = {8{D[3:0]}};
@@ -39,6 +41,7 @@ module output_shifter (
         else if (addr[2:0] == 3'b101) dout = {8{D[23:20]}};
         else if (addr[2:0] == 3'b110) dout = {8{D[27:24]}};
         else if (addr[2:0] == 3'b111) dout = {8{D[31:28]}};
+        else dout = D;
       end
       3'b100: begin
         if (addr[3:0] == 4'b0000) dout = {16{D[1:0]}};
@@ -57,6 +60,7 @@ module output_shifter (
         else if (addr[3:0] == 4'b1101) dout = {16{D[27:26]}};
         else if (addr[3:0] == 4'b1110) dout = {16{D[29:28]}};
         else if (addr[3:0] == 4'b1111) dout = {16{D[31:30]}};
+        else dout = D;
       end
       3'b101: begin
         if (addr[4:0] == 5'b00000) dout = {32{D[0]}};
@@ -91,6 +95,7 @@ module output_shifter (
         else if (addr[4:0] == 5'b11101) dout = {32{D[29]}};
         else if (addr[4:0] == 5'b11110) dout = {32{D[30]}};
         else if (addr[4:0] == 5'b11111) dout = {32{D[31]}};
+        else dout = D;
       end
       default: dout = D;
     endcase

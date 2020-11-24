@@ -1,4 +1,4 @@
-`include "/home/rohan/sram_team/rohan/src/sram_interface.v"
+`include "/home/rohan/sram_team/rohan/src/sram_ifc.v"
 `include "/home/rohan/sram_team/rohan/src/sram_32_512_scn4m_subm.v"
 
 module z1top (
@@ -19,7 +19,7 @@ module z1top (
   wire csb_sync;
   wire web_sync;
 
-  sram_interface smiley (
+  sram_ifc smiley (
     .clk(clk),
     .d_fabric_in(d_fabric_in),
     .csb(csb),

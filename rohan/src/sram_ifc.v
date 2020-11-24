@@ -2,7 +2,7 @@
 `include "/home/rohan/sram_team/rohan/src/input_shifter.v"
 `include "/home/rohan/sram_team/rohan/src/output_shifter.v"
 
-module sram_interface (
+module sram_ifc (
   // from fabric
   input clk,
 	input [31:0] d_fabric_in,
