@@ -74,10 +74,19 @@ module sram_ifc (
   reg [31:0] d_fabric_out_reg;
   assign d_fabric_out = out_reg ? d_fabric_out_reg : d_fabric_out_noreg;
 
+  reg [2:0] conf_reg;
+  reg [4:0] subaddr_reg;
+  // Pipeline conf, subaddr to match timing of latching of web, csb, addr, din bits in sram block
+  always @(posedge clk) begin
+    conf_reg <= conf_sync;
+    subaddr_reg <= subaddr_sync;
+  end 
+
+
   output_shifter output_shifter_1 (
     .D(d_sram_out),
-    .conf(conf_sync),
-    .addr(subaddr_sync),
+    .conf(conf_reg),
+    .addr(subaddr_reg),
     .dout(d_fabric_out_noreg)
   );
 
