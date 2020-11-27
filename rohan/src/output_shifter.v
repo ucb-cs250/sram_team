@@ -25,6 +25,7 @@ module output_shifter (
   // conf 000: dout[15:8] = D[15:8];
   // conf 001: dout[15:8] = addr[0] ? D[31:24] : D[15:8]; 
   // assign dout[15:8] = (conf == 3'b001 && addr[0]) ? D[31:24] : D[15:8];
+  
 
   always @(*) begin
     dout[31:16] = D[31:16];
@@ -64,7 +65,7 @@ module output_shifter (
         else if (addr[3:0] == 4'b0101) dout[7:0] = {4{D[11:10]}};
         else if (addr[3:0] == 4'b0110) dout[7:0] = {4{D[13:12]}};
         else if (addr[3:0] == 4'b0111) dout[7:0] = {4{D[15:14]}};
-        else if (addr[3:0] == 4'b1000) dout[7:0] = {4{D[17:4]}};
+        else if (addr[3:0] == 4'b1000) dout[7:0] = {4{D[17:16]}};
         else if (addr[3:0] == 4'b1001) dout[7:0] = {4{D[19:18]}};
         else if (addr[3:0] == 4'b1010) dout[7:0] = {4{D[21:20]}};
         else if (addr[3:0] == 4'b1011) dout[7:0] = {4{D[23:22]}};

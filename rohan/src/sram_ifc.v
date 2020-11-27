@@ -1,6 +1,6 @@
 `include "/home/rohan/sram_team/rohan/src/bl_mask.v"
 `include "/home/rohan/sram_team/rohan/src/input_shifter.v"
-`include "/home/rohan/sram_team/rohan/src/output_shifter.v"
+`include "/home/rohan/sram_team/rohan/src/log_output_shifter.v"
 
 module sram_ifc (
   // from fabric
@@ -83,7 +83,7 @@ module sram_ifc (
   end 
 
 
-  output_shifter output_shifter_1 (
+  log_output_shifter output_shifter_1 (
     .D(d_sram_out),
     .conf(conf_reg),
     .addr(subaddr_reg),
