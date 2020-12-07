@@ -62,6 +62,7 @@ module log_output_shifter (
         2'b01: dout[7:4] = D[15:12];
         2'b10: dout[7:4] = D[23:20];
         2'b11: dout[7:4] = D[31:28];
+        default: dout[7:4] = D[15:12];
       endcase 
     end
     else dout[7:4] = D[7:4];
@@ -73,6 +74,7 @@ module log_output_shifter (
         2'b01: dout[3:2] = D[11:10];
         2'b10: dout[3:2] = D[19:18];
         2'b11: dout[3:2] = D[27:26];
+        default: dout[3:2] = D[11:10];
       endcase
     end
     else if (c4) begin
@@ -84,6 +86,7 @@ module log_output_shifter (
         3'b101: dout[3:2] = D[23:22];
         3'b110: dout[3:2] = D[27:26];
         3'b111: dout[3:2] = D[31:30];
+        default: dout[3:2] = D[11:10];
       endcase
     end
     else dout[3:2] = D[3:2];
@@ -95,6 +98,7 @@ module log_output_shifter (
         2'b01: dout[1] = D[9];
         2'b10: dout[1] = D[17];
         2'b11: dout[1] = D[25];
+        default: dout[1] = D[9];
       endcase
     end
     else if (c4) begin
@@ -106,6 +110,7 @@ module log_output_shifter (
         3'b101: dout[1] = D[21];
         3'b110: dout[1] = D[25];
         3'b111: dout[1] = D[29];
+        default: dout[1] = D[9];
       endcase
     end
     else if (c2) begin
@@ -125,6 +130,7 @@ module log_output_shifter (
         4'b1101: dout[1] = D[27];
         4'b1110: dout[1] = D[29];
         4'b1111: dout[1] = D[31];
+        default: dout[1] = D[9];
       endcase
       end
     else dout[1] = D[1];
@@ -136,6 +142,7 @@ module log_output_shifter (
         2'b01: dout[0] = D[8];
         2'b10: dout[0] = D[16];
         2'b11: dout[0] = D[24];
+        default: dout[0] = D[8];
       endcase
     end
     else if (c4) begin
@@ -147,6 +154,7 @@ module log_output_shifter (
         3'b101: dout[0] = D[20];
         3'b110: dout[0] = D[24];
         3'b111: dout[0] = D[28];
+        default: dout[0] = D[8];
       endcase
     end
     else if (c2) begin
@@ -166,6 +174,7 @@ module log_output_shifter (
         4'b1101: dout[0] = D[26];
         4'b1110: dout[0] = D[28];
         4'b1111: dout[0] = D[30];
+        default: dout[0] = D[8];
       endcase
     end
     else if (c1) begin
@@ -201,6 +210,7 @@ module log_output_shifter (
         5'b11101: dout[0] = D[29];
         5'b11110: dout[0] = D[30];
         5'b11111: dout[0] = D[31];
+        default: dout[0] = D[8];
       endcase
     end
     else dout[0] = D[0];
